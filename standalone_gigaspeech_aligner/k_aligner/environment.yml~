@@ -1,0 +1,64 @@
+name: aligner_k
+channels:
+  # Please keep the order and ideally the more specific channel the earlier it should be
+  - pytorch
+  - defaults
+  - conda-forge
+dependencies:
+	- cmake
+	- python=3.8
+	- cudatoolkit=11.3   # Build cuda_11.3.r11.3/compiler.29745058_0 See /usr/local/cuda/bin/nvcc --version
+	- pytorch=1.10.0
+	- torchaudio=0.10.0
+	- matplotlib
+	- dvc-s3=2.0.18
+	-pytorch-lightning=1.3.7
+  # sox, ffmpeg, svn needed inside env for kaldi aligner pipeline
+  - sox
+  - scipy
+    - pip
+    - kaldialign
+    - librosa==0.8.0
+    - espnet==0.10.3
+    - parallel_wavegan==0.5.3
+    - jsonargparse[signatures]
+    - espnet_model_zoo
+    - g2p_en
+    - pytorch_lamb
+    - streamlit
+    - chainer
+    - wandb>=0.10.28
+    - pydub
+    - statsmodels
+    - seaborn
+    - sequitur-g2p
+    - exp-notifier>=0.0.4
+    - smart_open[s3]
+    - soundfile
+    - htbuilder
+    - boto3
+    - torchmetrics==0.4.1
+    - fastdtw
+    - numba
+    - jsonschema
+    # development tools
+    - line_profiler
+    - black
+    - ipdb
+    - flake8
+    - pytest
+    - Flask
+    - tabulate
+    - aurora-data-api
+    - pandas
+    - pyloudnorm
+    - einops
+    - pydub
+    - statsmodels
+    - seaborn
+    - sequitur-g2p
+    - lhotse
+    - click==8.0.1
+    -num2words==0.5.10
+    -kaldiio==2.17.2
+
